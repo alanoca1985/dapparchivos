@@ -16,6 +16,14 @@ function randomBadge(): BadgeVariant {
   return variants[Math.floor(Math.random() * variants.length)] ?? "choredBlue";
 }
 
+function normalizeDriveUrl(url: string) {
+  const match = url.match(/drive\.google\.com\/file\/d\/([^/]+)\//i);
+  if (!match) return url;
+  const id = match[1];
+  if (!id) return url;
+  return `https://drive.google.com/uc?export=download&id=${id}`;
+}
+
 function makeInitialCards(): FileCardModel[] {
   const specs: Array<{
     kind: FileCardKind;
@@ -29,7 +37,7 @@ function makeInitialCards(): FileCardModel[] {
       kind: "document",
       name: "Vault Notes.doc",
       sizeLabel: "0.6 MB",
-      downloadUrl: "",
+      downloadUrl: "https://drive.google.com/file/d/1kskjJS2DAULihQ7H7KGD61e9fabYVisJ/view",
       previewUrl: "/card-1.png",
       previewFileName: "card-1.png",
     },
@@ -119,7 +127,7 @@ export default function Home() {
 
   const triggerDownload = (card: FileCardModel) => {
     if (card.downloadUrl) {
-      window.open(card.downloadUrl, "_blank", "noopener,noreferrer");
+      window.open(normalizeDriveUrl(card.downloadUrl), "_blank", "noopener,noreferrer");
       addToast("Opening Google Drive download", "info");
       return;
     }
