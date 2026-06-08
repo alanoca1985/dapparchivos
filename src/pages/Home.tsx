@@ -41,7 +41,15 @@ function makeInitialCards(): FileCardModel[] {
       previewUrl: "/card-1.png",
       previewFileName: "card-1.png",
     },
-    { kind: "document", name: "Security Brief.doc", sizeLabel: "840 KB", downloadUrl: "" },
+    {
+      kind: "document",
+      name: "Security Brief.doc",
+      sizeLabel: "0.3 MB",
+      downloadUrl:
+        "https://drive.google.com/file/d/1_7c9e_IsDADJ_Nxx2eB5veWMPH-RWIz2/view?usp=drive_link",
+      previewUrl: "/card-2.png",
+      previewFileName: "card-2.png",
+    },
     { kind: "document", name: "Roadmap Q4.doc", sizeLabel: "2.1 MB", downloadUrl: "" },
     { kind: "figma", name: "FileVault UI.fig", sizeLabel: "14.8 MB", downloadUrl: "" },
     { kind: "figma", name: "Vault Flow.fig", sizeLabel: "9.3 MB", downloadUrl: "" },
