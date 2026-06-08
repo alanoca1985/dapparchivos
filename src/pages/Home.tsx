@@ -22,8 +22,17 @@ function makeInitialCards(): FileCardModel[] {
     name: string;
     sizeLabel: string;
     downloadUrl?: string;
+    previewUrl?: string;
+    previewFileName?: string;
   }> = [
-    { kind: "document", name: "Vault Notes.doc", sizeLabel: "1.2 MB", downloadUrl: "" },
+    {
+      kind: "document",
+      name: "Vault Notes.doc",
+      sizeLabel: "0.6 MB",
+      downloadUrl: "",
+      previewUrl: "/card-1.png",
+      previewFileName: "card-1.png",
+    },
     { kind: "document", name: "Security Brief.doc", sizeLabel: "840 KB", downloadUrl: "" },
     { kind: "document", name: "Roadmap Q4.doc", sizeLabel: "2.1 MB", downloadUrl: "" },
     { kind: "figma", name: "FileVault UI.fig", sizeLabel: "14.8 MB", downloadUrl: "" },
@@ -43,6 +52,8 @@ function makeInitialCards(): FileCardModel[] {
     storageType: "Decentralized",
     badgeVariant: randomBadge(),
     downloadUrl: s.downloadUrl,
+    previewUrl: s.previewUrl,
+    previewFileName: s.previewFileName,
   }));
 }
 
