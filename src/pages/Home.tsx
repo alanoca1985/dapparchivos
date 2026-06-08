@@ -59,6 +59,15 @@ function makeInitialCards(): FileCardModel[] {
       previewUrl: "/card-3.png",
       previewFileName: "card-3.png",
     },
+    {
+      kind: "document",
+      name: "Camiseta Short Manga Corta.cdr",
+      sizeLabel: "13.0 MB",
+      downloadUrl:
+        "https://drive.google.com/file/d/1KA18b7nj7Av5lkQm2eKjfEOUjrc0GIUY/view?usp=drive_link",
+      previewUrl: "/card-4.png",
+      previewFileName: "card-4.png",
+    },
     { kind: "figma", name: "FileVault UI.fig", sizeLabel: "14.8 MB", downloadUrl: "" },
     { kind: "figma", name: "Vault Flow.fig", sizeLabel: "9.3 MB", downloadUrl: "" },
     { kind: "figma", name: "Mobile Layout.fig", sizeLabel: "7.6 MB", downloadUrl: "" },
